@@ -10,7 +10,7 @@ from django.dispatch import receiver
 # create profile Model
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    dob = models.DateField()
+    dob = models.DateField(null=True, blank=True)
     address = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=100, null=True, blank=True)
 
