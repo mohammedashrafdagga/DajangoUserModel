@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %} {% block content %}
+
+<div>
+  Welcome {{name}} in your profile
+  <p>dob: <span>{{profile.dob}}</span></p>
+  <p>address: <span>{{profile.address}}</span></p>
+
+  <a href="{% url 'edit-profile' %}"> Edit Profile </a>
+</div>
+
+{% endblock content %}
